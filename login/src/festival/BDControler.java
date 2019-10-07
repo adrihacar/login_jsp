@@ -15,10 +15,11 @@ public class BDControler {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			/*Change  cripto, username and password depending on your databse setup*/
 			this.myconnection = DriverManager.getConnection("jdbc:mysql://localhost/cripto", "username", "password");
 
 		} catch (SQLException e) {
-			System.out.println("Error en constructor BDController" + e.getMessage()); 
+			System.out.println("Error in constructor BDControler" + e.getMessage()); 
 		}
 		String sqlqueryPrepExistClient = "SELECT email FROM users WHERE email=?;";
 		String sqlqueryPrepCheckUser = "SELECT email FROM users WHERE email=? AND password=?;";

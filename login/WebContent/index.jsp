@@ -60,8 +60,8 @@
 	          <img style='width:50px; cursor:pointer;' src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" alt="avatar image"/>
 	        </a>
 	        <div class="dropdown-menu dropdown-menu-right dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-55">
-	          <a class="dropdown-item" href="login.jsp">Iniciar Sesión</a>
-	          <a class="dropdown-item" href="register.jsp?action=create-new-user">Registrarse</a>
+	          <a class="dropdown-item" href="login.jsp">Login</a>
+	          <a class="dropdown-item" href="register.jsp?action=create-new-user">Sign Up</a>
 	        </div>
 	      </li>
 	    </ul>

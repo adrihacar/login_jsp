@@ -61,7 +61,7 @@
 		  <%} 
 	String error = request.getParameter("error");
 	  if(error!=null && error.equalsIgnoreCase("client-exist")){
-			  out.print("<h3 style='color:red'>Usuario ya existe</h3>");
+			  out.print("<h3 style='color:red'>User already exists</h3>");
 			  }
  %>
 

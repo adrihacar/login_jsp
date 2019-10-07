@@ -21,39 +21,35 @@ public class User {
 		this.email = email;
 		
 		
-		/*CREAMOS SALT CON SECURE RANDOM*/
+		/*Create a random salt with class SecureRandom*/
 		SecureRandom random = new SecureRandom();
 		byte[] num = new byte[16];
 		random.nextBytes(num);
-		String salt=Base64.getEncoder().encodeToString(num); //PARSEADO A STRING
+		String salt=Base64.getEncoder().encodeToString(num); /*Encode the bytes generated in Base64 printable Strings*/
 		
 		this.salt=salt;
 		this.hashedPassword= getSHA256Hash(password,salt);
 	}
 	
 	public static String getSHA256Hash(String data, String salt) {
-		      String result = null;
-		        try {
-		        	/*CREAMOS OBJETO*/
-		            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+		 String result = null;
+		 try {
+			 /*Create Object digest*/
+		     MessageDigest digest = MessageDigest.getInstance("SHA-256");
+		     /*Add salt to object*/
+		     digest.update(salt.getBytes());
+		     /*Add the data(password) to object*/
+		     byte[] hash = digest.digest(data.getBytes("UTF-8"));
+		     /*Get the hash and encode in Base64*/
+		     result = Base64.getEncoder().encodeToString(hash);
 		            
-		            /*A�ADIMOS EL SALT*/
-		            digest.update(salt.getBytes());
 		            
-		           /*A�ADIMOS LA CONTRASE�A*/
-		            byte[] hash = digest.digest(data.getBytes("UTF-8"));
-		            
-		            /*PASAMOS A BASE64*/
-		            result = Base64.getEncoder().encodeToString(hash);
-		        }catch(Exception ex) {
-	
-		            ex.printStackTrace();
-	
-		        }
+		 }catch(Exception ex) {
+		      ex.printStackTrace();
+		 }
+		 return result;
 		
-		        return result;
-		
-		    }
+		 }
 	
 		     
 

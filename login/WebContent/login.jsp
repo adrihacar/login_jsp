@@ -43,7 +43,7 @@
 		String status = request.getParameter("status");
 	
 	  if(status!=null && status.equalsIgnoreCase("error")){%>
-		  <h3 style='color:red;margin:auto;'>Email o contraseña incorrectos</h3>
+		  <h3 style='color:red;margin:auto;'>email or password incorrect</h3>
 		 <%} %> 
 	
 	
