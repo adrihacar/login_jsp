@@ -33,6 +33,6 @@ File > New > Other... >Server > Server >Next >Tomcatv7.0Server > Next > Finish
 ```
 * Run the project in the server from eclipse
 
-##Authors
+## Authors
 
 * **Adrián Hacar** - *Initial work* - [adrihacar](https://github.com/adrihacar)
